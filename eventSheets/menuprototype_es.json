@@ -1,0 +1,114 @@
+{
+	"name": "MenuPrototype_ES",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Do not delete."
+		},
+		{
+			"eventType": "comment",
+			"text": "Create a group by pressing 'G'"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Buttons",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Prototype01_Button",
+							"sid": 211854212435018
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 234542096880019,
+							"parameters": {
+								"layout": "Prototype01"
+							}
+						}
+					],
+					"sid": 379360249984017
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Prototype02_Button",
+							"sid": 149578585006564
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 216898887934390,
+							"parameters": {
+								"layout": "Prototype02"
+							}
+						}
+					],
+					"sid": 641000740635561
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Prototype03_Button",
+							"sid": 361930006828928
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 241424011645623,
+							"parameters": {
+								"layout": "Prototype03"
+							}
+						}
+					],
+					"sid": 455577478024451
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Menu_Button",
+							"sid": 588894217031355
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 819033708222777,
+							"parameters": {
+								"layout": "MenuPrototype"
+							}
+						}
+					],
+					"sid": 571428684958422
+				}
+			],
+			"sid": 950229227660712
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 509086442812922
+		}
+	],
+	"sid": 112064192236186
+}

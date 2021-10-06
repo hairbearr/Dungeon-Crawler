@@ -1,0 +1,31 @@
+{
+	"name": "Prototype01_ES",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Do not delete"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Menu_Button",
+					"sid": 924659407202461
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 168821516711458,
+					"parameters": {
+						"layout": "MenuPrototype"
+					}
+				}
+			],
+			"sid": 970608049604052
+		}
+	],
+	"sid": 843601103535796
+}
