@@ -1,0 +1,30 @@
+{
+	"name": "Projectiles",
+	"plugin-id": "Sprite",
+	"sid": 259465953198444,
+	"instanceVariables": [
+		{
+			"name": "ProjectileSpeed",
+			"type": "number",
+			"desc": "",
+			"sid": 140504095537671
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 249339782007859
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 699323692894647
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"ProjPlayerArrows",
+		"ProjEnemyArrows"
+	]
+}

@@ -8,8 +8,8 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Button",
-			"name": "Button",
+			"id": "Sprite",
+			"name": "Sprite",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -18,6 +18,110 @@
 			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -30,14 +134,54 @@
 			"Prototype02_Button",
 			"Prototype03_Button",
 			"Instructions",
-			"Menu_Button"
+			"Menu_Button",
+			"Keyboard",
+			"Mouse",
+			"Browser"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Chest",
+					"Key",
+					"MeleeEnemy",
+					"MeleeSpawn",
+					"MoveableWall",
+					"Player",
+					"ProjEnemyArrows",
+					"ProjPlayerArrows",
+					"PuAmmo",
+					"PuBow",
+					"RangedEnemy",
+					"Switch",
+					"TxtAmmo",
+					"TxtHealth",
+					"Walls"
+				],
+				"subfolders": [],
+				"name": "Prototype01"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Prototype02"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Prototype03"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Enemies",
+			"Projectiles",
+			"Chests",
+			"MoveableWalls"
+		],
 		"subfolders": []
 	},
 	"layouts": {

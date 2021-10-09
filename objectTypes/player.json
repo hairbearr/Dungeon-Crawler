@@ -1,0 +1,138 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 596611204437464,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "MeleeAttackPower",
+			"type": "number",
+			"desc": "",
+			"sid": 213963569825775
+		},
+		{
+			"name": "RangedAttackPower",
+			"type": "number",
+			"desc": "",
+			"sid": 749436642119859
+		},
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 888574871719501
+		},
+		{
+			"name": "HasBow",
+			"type": "boolean",
+			"desc": "",
+			"sid": 968570666020403
+		},
+		{
+			"name": "Ammo",
+			"type": "number",
+			"desc": "",
+			"sid": 253253473334608
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 556429521364856
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 452433079108454
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 25,
+						"height": 25,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4169265,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 421008576526729,
+				"name": "Normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 50,
+						"height": 25,
+						"originX": 0.3,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7019924,
+						"collisionPoly": {
+							"points": [
+								0.05,
+								0.024999999999999998,
+								0.5300000000000005,
+								0.030000000000000002,
+								0.5287500000000036,
+								0.7725000000000002,
+								0.7250000000000006,
+								0.7800000000000017,
+								0.7512499999999991,
+								0.858750000000001,
+								0.7224999999999987,
+								0.9375000000000003,
+								0.5312500000000001,
+								0.9375000000000007,
+								0.5300000000000004,
+								0.9800000000000004,
+								0.05,
+								0.9775000000000005
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.54,
+								"y": 0.84
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 108637539723894,
+				"name": "Melee",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

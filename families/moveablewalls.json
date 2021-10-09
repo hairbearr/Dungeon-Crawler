@@ -1,0 +1,18 @@
+{
+	"name": "MoveableWalls",
+	"plugin-id": "Sprite",
+	"sid": 775346167362565,
+	"instanceVariables": [
+		{
+			"name": "DoorNumbers",
+			"type": "number",
+			"desc": "",
+			"sid": 662411042534127
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MoveableWall"
+	]
+}

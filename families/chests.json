@@ -1,0 +1,24 @@
+{
+	"name": "Chests",
+	"plugin-id": "Sprite",
+	"sid": 128680214405641,
+	"instanceVariables": [
+		{
+			"name": "KeyType",
+			"type": "number",
+			"desc": "",
+			"sid": 175906248871710
+		},
+		{
+			"name": "IsUnlocked",
+			"type": "boolean",
+			"desc": "",
+			"sid": 474231162182847
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Chest"
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"name": "Enemies",
+	"plugin-id": "Sprite",
+	"sid": 127831010529136,
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 963874200345650
+		},
+		{
+			"name": "RandomDrop",
+			"type": "number",
+			"desc": "",
+			"sid": 528186820571626
+		},
+		{
+			"name": "AttackPower",
+			"type": "number",
+			"desc": "",
+			"sid": 546749836939408
+		},
+		{
+			"name": "StartingPosX",
+			"type": "number",
+			"desc": "",
+			"sid": 821489760639549
+		},
+		{
+			"name": "StartingPosY",
+			"type": "number",
+			"desc": "",
+			"sid": 296447663281984
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MeleeEnemy",
+		"RangedEnemy"
+	]
+}
