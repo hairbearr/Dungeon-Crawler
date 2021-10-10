@@ -1,0 +1,14 @@
+{
+	"name": "Interactables",
+	"plugin-id": "Sprite",
+	"sid": 984466782720748,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"PuSlowDownPrototype2",
+		"PuSpeedUpPrototype2",
+		"PuToughenUpPrototype2",
+		"PuMoreTimePrototype3"
+	]
+}

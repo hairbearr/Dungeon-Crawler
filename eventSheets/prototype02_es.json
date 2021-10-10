@@ -2,6 +2,16 @@
 	"name": "Prototype02_ES",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Timer",
+			"type": "number",
+			"initialValue": "30",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 806026344186906
+		},
+		{
 			"eventType": "comment",
 			"text": "Do not delete"
 		},
@@ -25,6 +35,463 @@
 				}
 			],
 			"sid": 704861094877198
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "InteractionsPrototype2",
+					"description": "What happens when you run into things",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerPrototype2",
+									"sid": 972050106827739,
+									"parameters": {
+										"object": "Interactables"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Interactables",
+									"sid": 212725920111361
+								}
+							],
+							"sid": 689633323441401
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerPrototype2",
+									"sid": 827229029454051,
+									"parameters": {
+										"object": "PuMoreTimePrototype3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 400418908279640,
+									"parameters": {
+										"variable": "Timer",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 969812772376709
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerPrototype2",
+									"sid": 200873252127510,
+									"parameters": {
+										"object": "PuSlowDownPrototype2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "PlayerPrototype2",
+									"sid": 828606588871031,
+									"behaviorType": "Car",
+									"parameters": {
+										"speed": "PlayerPrototype2.Speed/2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 633380547608254,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "PlayerPrototype2",
+									"sid": 293404860238063,
+									"behaviorType": "Car",
+									"parameters": {
+										"speed": "PlayerPrototype2.Speed"
+									}
+								}
+							],
+							"sid": 479003161898974
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerPrototype2",
+									"sid": 829328986046891,
+									"parameters": {
+										"object": "PuSpeedUpPrototype2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "PlayerPrototype2",
+									"sid": 571822134233354,
+									"behaviorType": "Car",
+									"parameters": {
+										"speed": "PlayerPrototype2.Speed*2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 615338908826003,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "PlayerPrototype2",
+									"sid": 318543297236624,
+									"behaviorType": "Car",
+									"parameters": {
+										"speed": "PlayerPrototype2.Speed"
+									}
+								}
+							],
+							"sid": 430604650171214
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerPrototype2",
+									"sid": 233714562030210,
+									"parameters": {
+										"object": "PuToughenUpPrototype2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-friction",
+									"objectClass": "PlayerPrototype2",
+									"sid": 679945296562306,
+									"behaviorType": "Car",
+									"parameters": {
+										"friction": "0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 206985895699296,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "set-friction",
+									"objectClass": "PlayerPrototype2",
+									"sid": 485808173905006,
+									"behaviorType": "Car",
+									"parameters": {
+										"friction": "PlayerPrototype2.Friction"
+									}
+								}
+							],
+							"sid": 715119772996232
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "PlayerPrototype2",
+									"sid": 235681367031219,
+									"parameters": {
+										"object": "WinCondition"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 281194229180910,
+									"parameters": {
+										"layout": "MenuPrototype"
+									}
+								}
+							],
+							"sid": 208652592892856
+						}
+					],
+					"sid": 270987885915050
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Controls",
+					"description": "You can use either the arrows or the WASD keys",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 512444468011718,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerPrototype2",
+									"sid": 499786617707608,
+									"behaviorType": "Car",
+									"parameters": {
+										"control": "accelerate"
+									}
+								}
+							],
+							"sid": 491243905736562
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 736299848693112,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerPrototype2",
+									"sid": 291374252384292,
+									"behaviorType": "Car",
+									"parameters": {
+										"control": "steer-left"
+									}
+								}
+							],
+							"sid": 893296132354172
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 860676094211765,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerPrototype2",
+									"sid": 280032618791064,
+									"behaviorType": "Car",
+									"parameters": {
+										"control": "brake"
+									}
+								}
+							],
+							"sid": 349599774422050
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 844065057188430,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PlayerPrototype2",
+									"sid": 938610417319365,
+									"behaviorType": "Car",
+									"parameters": {
+										"control": "steer-right"
+									}
+								}
+							],
+							"sid": 242680843603897
+						}
+					],
+					"sid": 809892250033434
+				}
+			],
+			"sid": 599908286131774
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Timer",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 217480625323622
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TimerPrototype2",
+							"sid": 920211427234587,
+							"parameters": {
+								"text": "float(Timer)"
+							}
+						}
+					],
+					"sid": 442449372017421
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 698642423573851,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 718524589462001,
+							"parameters": {
+								"variable": "Timer",
+								"value": "0.1"
+							}
+						}
+					],
+					"sid": 982041694278622
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 993935209697517,
+							"parameters": {
+								"variable": "Timer",
+								"comparison": 3,
+								"value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "TimerPrototype2",
+							"sid": 727856832587707,
+							"parameters": {
+								"x": "326.999983",
+								"y": "225.000024"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TimerPrototype2",
+							"sid": 488523984854281,
+							"parameters": {
+								"color": "rgbEx(255, 0, 0)"
+							}
+						},
+						{
+							"id": "set-font-size",
+							"objectClass": "TimerPrototype2",
+							"sid": 959034591748523,
+							"parameters": {
+								"size-pt": "24"
+							}
+						},
+						{
+							"id": "set-font-face",
+							"objectClass": "TimerPrototype2",
+							"sid": 534176637639085,
+							"parameters": {
+								"font-face": "\"Arial\"",
+								"style": "bold"
+							}
+						}
+					],
+					"sid": 880236673074509
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 482666087982366,
+							"parameters": {
+								"variable": "Timer",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 481742381556102
+						}
+					],
+					"sid": 345632241863262
+				}
+			],
+			"sid": 621211827049039
 		}
 	],
 	"sid": 631964721396052

@@ -1,0 +1,61 @@
+{
+	"name": "PlayerPrototype2",
+	"plugin-id": "Sprite",
+	"sid": 674909089790903,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Friction",
+			"type": "number",
+			"desc": "Player's OG Friction",
+			"sid": 381538928420350
+		},
+		{
+			"name": "Speed",
+			"type": "number",
+			"desc": "Player's OG Speed",
+			"sid": 155866827684433
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Car",
+			"name": "Car",
+			"sid": 542745455529280
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 872142201012301
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7172737,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 569534618053669,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

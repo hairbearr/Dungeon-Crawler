@@ -1,0 +1,37 @@
+{
+	"name": "PuSpeedUpPrototype2",
+	"plugin-id": "Sprite",
+	"sid": 793652504242653,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 3.90625,
+						"originY": 3.90625,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7191015,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 896535238981760,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

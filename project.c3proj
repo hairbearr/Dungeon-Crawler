@@ -112,6 +112,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Car",
+			"name": "Car",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
@@ -162,7 +170,16 @@
 				"name": "Prototype01"
 			},
 			{
-				"items": [],
+				"items": [
+					"BordersPrototype2",
+					"PlayerPrototype2",
+					"PuSlowDownPrototype2",
+					"PuSpeedUpPrototype2",
+					"PuToughenUpPrototype2",
+					"PuMoreTimePrototype3",
+					"TimerPrototype2",
+					"WinCondition"
+				],
 				"subfolders": [],
 				"name": "Prototype02"
 			},
@@ -176,13 +193,26 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [
-			"Enemies",
-			"Projectiles",
-			"Chests",
-			"MoveableWalls"
-		],
-		"subfolders": []
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"Chests",
+					"Enemies",
+					"MoveableWalls",
+					"Projectiles"
+				],
+				"subfolders": [],
+				"name": "Prototype1"
+			},
+			{
+				"items": [
+					"Interactables"
+				],
+				"subfolders": [],
+				"name": "Prototype2"
+			}
+		]
 	},
 	"layouts": {
 		"items": [

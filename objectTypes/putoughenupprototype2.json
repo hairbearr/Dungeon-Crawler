@@ -1,0 +1,37 @@
+{
+	"name": "PuToughenUpPrototype2",
+	"plugin-id": "Sprite",
+	"sid": 176368698676225,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 3.90625,
+						"originY": 3.90625,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4260325,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 514936066845684,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
