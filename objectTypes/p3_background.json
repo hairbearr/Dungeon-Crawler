@@ -1,0 +1,21 @@
+{
+	"name": "P3_Background",
+	"plugin-id": "Tilemap",
+	"sid": 725084394603912,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 352,
+		"height": 224,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8160671,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

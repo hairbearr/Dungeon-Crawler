@@ -2,6 +2,26 @@
 	"name": "Prototype03_ES",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "MousePos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 233136494379861
+		},
+		{
+			"eventType": "variable",
+			"name": "grappleLaunched",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 966247958208161
+		},
+		{
 			"eventType": "comment",
 			"text": "Do not delete"
 		},
@@ -25,6 +45,760 @@
 				}
 			],
 			"sid": 464329866894596
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 851946320288096
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "P3_Crosshairs",
+					"sid": 944974187352551
+				},
+				{
+					"id": "set-active",
+					"objectClass": "P3_GrappleLine",
+					"sid": 268706139661023,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "inactive"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "P3_GrappleLine",
+					"sid": 360620210311883,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 103113291383796
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 737912949912477
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 493060163869298,
+					"parameters": {
+						"variable": "grappleLaunched",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "P3_Player",
+					"sid": 508260748685199,
+					"parameters": {
+						"instance-variable": "OnGrapple"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 166235815136065,
+					"parameters": {
+						"variable": "grappleLaunched",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 417449660568263,
+					"parameters": {
+						"variable": "MousePos",
+						"value": "Touch.X"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 880939906482707,
+					"parameters": {
+						"object-to-create": "P3_Crosshairs",
+						"layer": "0",
+						"x": "P3_Player.ImagePointX(1)",
+						"y": "P3_Player.ImagePointY(1)",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "P3_Crosshairs",
+					"sid": 277186726821896,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "P3_Crosshairs",
+					"sid": 830010936260875,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "angle(P3_Player.ImagePointX(1), P3_Player.ImagePointY(1), Touch.X, Touch.Y)"
+					}
+				}
+			],
+			"sid": 928041263810673,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 177926538889180,
+							"parameters": {
+								"variable": "MousePos",
+								"comparison": 3,
+								"value": "P3_Player.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "P3_Player",
+							"sid": 874852812360324,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 764048782673140
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 295014430173719,
+							"parameters": {
+								"variable": "MousePos",
+								"comparison": 4,
+								"value": "P3_Player.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "P3_Player",
+							"sid": 341537839438491,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 359127516964408
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PlayerControls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "FacingDirections"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 519800120095150,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "P3_Player",
+							"sid": 364422699593250,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 915903649190961
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 247503074522593,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "P3_Player",
+							"sid": 927062467634259,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 623535121307521
+				},
+				{
+					"eventType": "comment",
+					"text": "Right and Left Movements"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 106536585235383,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "P3_Player",
+							"sid": 608907740186987,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 756225910235456
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 252372263805276,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "P3_Player",
+							"sid": 582522014472652,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 154233846379183
+				},
+				{
+					"eventType": "comment",
+					"text": "Jump!"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 442866054048980,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "P3_Player",
+							"sid": 963323597108122,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 419081574724859
+				}
+			],
+			"sid": 959090635586012
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Grapple Mechanics",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Collisions",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-distance-travelled",
+									"objectClass": "P3_Crosshairs",
+									"sid": 631195756546865,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"comparison": 5,
+										"distance": "200"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "P3_Crosshairs",
+									"sid": 183720381717950,
+									"parameters": {
+										"object": "P3_Walls"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "P3_Crosshairs",
+									"sid": 403221632441646,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "P3_Crosshairs",
+									"sid": 107750295124751
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 659404694035094,
+									"parameters": {
+										"variable": "grappleLaunched",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 270964598345860,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "P3_Crosshairs",
+									"sid": 385354002008604,
+									"parameters": {
+										"object": "GrapplePoint"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "P3_Crosshairs",
+									"sid": 912265887030573,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "P3_GrappleLine",
+									"sid": 201647788356912,
+									"parameters": {
+										"object": "P3_Crosshairs",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "P3_GrappleAngle",
+									"sid": 461738085768169,
+									"parameters": {
+										"object": "P3_GrappleLine",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "P3_GrappleAngle",
+									"sid": 786446153232775,
+									"parameters": {
+										"x": "P3_Player.ImagePointX(1)",
+										"y": "P3_Player.ImagePointY(1)"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "P3_GrappleLine",
+									"sid": 597605650308455,
+									"parameters": {
+										"width": "distance(P3_Player.ImagePointX(1), P3_Player.ImagePointY(1), P3_GrappleLine.X, P3_GrappleLine.Y)"
+									}
+								}
+							],
+							"sid": 242734578808992,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-between-angles",
+											"objectClass": "P3_GrappleAngle",
+											"sid": 886703209597754,
+											"parameters": {
+												"first-angle": "270",
+												"second-angle": "360"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-magnitude",
+											"objectClass": "P3_GrappleLine",
+											"sid": 237047941732040,
+											"behaviorType": "Sine",
+											"parameters": {
+												"magnitude": "P3_GrappleAngle.Angle - 450"
+											}
+										}
+									],
+									"sid": 608512420111608
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 361995452777749
+										}
+									],
+									"actions": [
+										{
+											"id": "set-magnitude",
+											"objectClass": "P3_GrappleLine",
+											"sid": 215933621641372,
+											"behaviorType": "Sine",
+											"parameters": {
+												"magnitude": "P3_GrappleAngle.Angle - 90"
+											}
+										}
+									],
+									"sid": 717241105846457
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-cycle-position",
+											"objectClass": "P3_GrappleLine",
+											"sid": 472365189397409,
+											"behaviorType": "Sine",
+											"parameters": {
+												"cycle-position": "0.25"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "P3_GrappleLine",
+											"sid": 390008430845054,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 951000371919035,
+											"parameters": {
+												"seconds": "0.05"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "P3_GrappleLine",
+											"sid": 977933417652649,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "P3_Player",
+											"sid": 419126175829797,
+											"parameters": {
+												"object": "P3_GrappleLine",
+												"image-point-optional": "1"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "P3_Player",
+											"sid": 262314254375383,
+											"parameters": {
+												"instance-variable": "OnGrapple",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 399504707766658
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-width",
+									"objectClass": "P3_GrappleLine",
+									"sid": 444716220167102,
+									"parameters": {
+										"comparison": 5,
+										"width": "300"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-period",
+									"objectClass": "P3_GrappleLine",
+									"sid": 486091814112629,
+									"behaviorType": "Sine",
+									"parameters": {
+										"period": "3.5"
+									}
+								}
+							],
+							"sid": 642069445235120
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 106292508506807
+								}
+							],
+							"actions": [
+								{
+									"id": "set-period",
+									"objectClass": "P3_GrappleLine",
+									"sid": 947996673848133,
+									"behaviorType": "Sine",
+									"parameters": {
+										"period": "2.5"
+									}
+								}
+							],
+							"sid": 774053349611441
+						}
+					],
+					"sid": 315808671239245
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Dismount",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 297614623738945,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "P3_Player",
+									"sid": 567021038126845,
+									"parameters": {
+										"instance-variable": "OnGrapple"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 837763769637591,
+									"parameters": {
+										"variable": "grappleLaunched",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "P3_Player",
+									"sid": 426918723163145,
+									"parameters": {
+										"instance-variable": "OnGrapple",
+										"value": "false"
+									}
+								},
+								{
+									"id": "unpin",
+									"objectClass": "P3_Player",
+									"sid": 783235899936856,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-vector-y",
+									"objectClass": "P3_Player",
+									"sid": 316206858514856,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "-300"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "P3_GrappleLine",
+									"sid": 777247109704041,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "P3_GrappleLine",
+									"sid": 185466844035747,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "P3_Crosshairs",
+									"sid": 229999947657023
+								}
+							],
+							"sid": 352083471914328
+						}
+					],
+					"sid": 546801102571700
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Retract",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 859118863120808
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "P3_Player",
+									"sid": 786940351063904,
+									"parameters": {
+										"instance-variable": "OnGrapple"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "P3_Player",
+									"sid": 835981676335419,
+									"parameters": {
+										"object": "P3_GrappleLine",
+										"image-point-optional": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 760355886743039,
+									"parameters": {
+										"variable": "grappleLaunched",
+										"value": "0"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "P3_Player",
+									"sid": 985880659061519,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "P3_GrappleLine",
+										"x": true,
+										"y": true,
+										"angle": false,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 993516244309749
+						}
+					],
+					"sid": 155684822865735
+				}
+			],
+			"sid": 608794514530259
 		}
 	],
 	"sid": 974727041872239

@@ -1,0 +1,67 @@
+{
+	"name": "P3_Player",
+	"plugin-id": "Sprite",
+	"sid": 165823817430272,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "OnGrapple",
+			"type": "boolean",
+			"desc": "",
+			"sid": 785612387514618
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 450740080796604
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 808317931895809
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 820876260033542
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2192763,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.8125,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 526505420931617,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

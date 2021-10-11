@@ -480,6 +480,27 @@
 								}
 							],
 							"sid": 814160406886555
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "ProjPlayerArrows",
+									"sid": 662515982596654,
+									"parameters": {
+										"object": "Walls"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "ProjEnemyArrows",
+									"sid": 672470547399262
+								}
+							],
+							"sid": 677840983529400
 						}
 					],
 					"sid": 196173743346148
@@ -721,6 +742,27 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "ProjEnemyArrows",
+							"sid": 302499155883922,
+							"parameters": {
+								"object": "Walls"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "ProjEnemyArrows",
+							"sid": 139880984243209
+						}
+					],
+					"sid": 970100203333347
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-instance-variable",
 							"objectClass": "Enemies",
 							"sid": 106124329299171,
@@ -913,8 +955,43 @@
 					"sid": 837758532685685
 				}
 			],
-			"actions": [],
-			"sid": 503538702123367
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TxtHealth",
+					"sid": 694693393282865,
+					"parameters": {
+						"text": "\"Health: \" & Player.Health"
+					}
+				}
+			],
+			"sid": 503538702123367,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 560622242616446,
+							"parameters": {
+								"instance-variable": "HasBow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TxtAmmo",
+							"sid": 795145477237571,
+							"parameters": {
+								"text": "\"Arrows: \" & Player.Ammo "
+							}
+						}
+					],
+					"sid": 587986937054498
+				}
+			]
 		}
 	],
 	"sid": 843601103535796

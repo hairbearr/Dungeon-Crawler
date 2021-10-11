@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "MoveTo",
 			"name": "Move To",
@@ -128,6 +136,30 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
 			"author": "Scirra",
@@ -145,7 +177,8 @@
 			"Menu_Button",
 			"Keyboard",
 			"Mouse",
-			"Browser"
+			"Browser",
+			"Touch"
 		],
 		"subfolders": [
 			{
@@ -184,7 +217,15 @@
 				"name": "Prototype02"
 			},
 			{
-				"items": [],
+				"items": [
+					"P3_Walls",
+					"P3_Background",
+					"P3_Crosshairs",
+					"GrapplePoint",
+					"P3_Player",
+					"P3_GrappleLine",
+					"P3_GrappleAngle"
+				],
 				"subfolders": [],
 				"name": "Prototype03"
 			}
