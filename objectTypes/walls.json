@@ -13,15 +13,31 @@
 	],
 	"effectTypes": [],
 	"image": {
-		"width": 352,
-		"height": 224,
+		"width": 96,
+		"height": 272,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 8602926,
+		"imageSpriteId": 1813058,
 		"useCollisionPoly": true
 	},
-	"tile-collision-polys": {}
+	"tile-collision-polys": {
+		"34": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		}
+	}
 }
