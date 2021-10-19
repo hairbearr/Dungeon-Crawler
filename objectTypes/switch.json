@@ -15,6 +15,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 707103589174308
+		},
+		{
+			"name": "TurnOffTurrets",
+			"type": "boolean",
+			"desc": "",
+			"sid": 827750687733974
 		}
 	],
 	"behaviorTypes": [],
@@ -24,20 +30,20 @@
 			{
 				"frames": [
 					{
-						"width": 25,
-						"height": 25,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4226141,
+						"imageSpriteId": 7673148,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
 				"sid": 993223184042543,
-				"name": "Closed",
+				"name": "Unlit",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -47,96 +53,61 @@
 			{
 				"frames": [
 					{
-						"width": 25,
-						"height": 25,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8968044,
+						"imageSpriteId": 8736829,
 						"useCollisionPoly": true,
 						"duration": 1
 					},
 					{
-						"width": 25,
-						"height": 25,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7643996,
+						"imageSpriteId": 104204,
 						"useCollisionPoly": true,
 						"duration": 1
 					},
 					{
-						"width": 25,
-						"height": 25,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4084175,
+						"imageSpriteId": 7749484,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7409126,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 142483557290762,
-				"name": "Open",
-				"isLooping": false,
+				"sid": 587632071863151,
+				"name": "Lit",
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
-			},
-			{
-				"frames": [
-					{
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 2253992,
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 5283825,
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 25,
-						"height": 25,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 4089953,
-						"useCollisionPoly": true,
-						"duration": 1
-					}
-				],
-				"sid": 283686763338992,
-				"name": "Closing",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
+				"speed": 3
 			}
 		],
 		"subfolders": []

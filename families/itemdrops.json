@@ -1,0 +1,18 @@
+{
+	"name": "ItemDrops",
+	"plugin-id": "Sprite",
+	"sid": 113228171958380,
+	"instanceVariables": [
+		{
+			"name": "ItemDropNum",
+			"type": "number",
+			"desc": "",
+			"sid": 718427298968490
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"PuBow"
+	]
+}

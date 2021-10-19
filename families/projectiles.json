@@ -15,16 +15,10 @@
 			"behaviorId": "Bullet",
 			"name": "Bullet",
 			"sid": 249339782007859
-		},
-		{
-			"behaviorId": "Fade",
-			"name": "Fade",
-			"sid": 699323692894647
 		}
 	],
 	"effectTypes": [],
 	"members": [
-		"ProjPlayerArrows",
 		"ProjEnemyArrows"
 	]
 }

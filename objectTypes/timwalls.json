@@ -1,0 +1,43 @@
+{
+	"name": "TiMWalls",
+	"plugin-id": "Tilemap",
+	"sid": 438652558795981,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 997411725825677
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 96,
+		"height": 272,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1813058,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {
+		"34": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		}
+	}
+}

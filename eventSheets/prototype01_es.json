@@ -2,6 +2,16 @@
 	"name": "Prototype01_ES",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "LevelUp",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 331056608074654
+		},
+		{
 			"eventType": "comment",
 			"text": "Do not delete"
 		},
@@ -36,6 +46,203 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Leveling",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 605940130262670,
+									"parameters": {
+										"instance-variable": "Experience",
+										"comparison": 0,
+										"value": "20"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 501960774277360,
+									"parameters": {
+										"variable": "LevelUp"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 232382603258702,
+									"parameters": {
+										"variable": "LevelUp",
+										"value": "true"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 928718726352815,
+									"parameters": {
+										"instance-variable": "Experience",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 864132376805533
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 426415719074997,
+									"parameters": {
+										"instance-variable": "Experience",
+										"comparison": 0,
+										"value": "61"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 296456545885985,
+									"parameters": {
+										"variable": "LevelUp"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 608018344330648,
+									"parameters": {
+										"variable": "LevelUp",
+										"value": "true"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 838509318156517,
+									"parameters": {
+										"instance-variable": "Experience",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 600922902125155
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 271231922637374,
+									"parameters": {
+										"instance-variable": "Experience",
+										"comparison": 0,
+										"value": "122"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 619895465929096,
+									"parameters": {
+										"variable": "LevelUp"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 754822934727073,
+									"parameters": {
+										"variable": "LevelUp",
+										"value": "true"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 530799715992290,
+									"parameters": {
+										"instance-variable": "Experience",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 162810629648235
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 631362697165962,
+									"parameters": {
+										"variable": "LevelUp"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 725304520610555,
+									"parameters": {
+										"variable": "LevelUp",
+										"value": "false"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 825629543799850,
+									"parameters": {
+										"instance-variable": "Level",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 828216354965077,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "2"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Player",
+									"sid": 766452912138690,
+									"parameters": {
+										"instance-variable": "MeleeAttackPower",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 615933385256578
+						}
+					],
+					"sid": 535631735807290
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Interactions",
 					"description": "",
 					"isActiveOnStart": true,
@@ -67,47 +274,50 @@
 											}
 										}
 									],
-									"actions": [],
-									"sid": 395623629597439,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Chest",
-													"sid": 777703141677593,
-													"parameters": {
-														"instance-variable": "IsUnlocked"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "destroy",
-													"objectClass": "Chest",
-													"sid": 736322235796626
-												},
-												{
-													"id": "set-visible",
-													"objectClass": "PuBow",
-													"sid": 133606554801859,
-													"parameters": {
-														"visibility": "visible"
-													}
-												},
-												{
-													"id": "set-collisions-enabled",
-													"objectClass": "PuBow",
-													"sid": 212096018085241,
-													"parameters": {
-														"collisions": "enabled"
-													}
-												}
-											],
-											"sid": 779665833568681
+											"id": "set-animation",
+											"objectClass": "Chest",
+											"sid": 674637976754006,
+											"parameters": {
+												"animation": "\"Open\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "Chest",
+											"sid": 721527972919896,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "PuBow",
+											"sid": 113814678090978,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 302260274377140,
+											"parameters": {
+												"seconds": "2"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "PuBow",
+											"sid": 265694093937056,
+											"parameters": {
+												"collisions": "enabled"
+											}
 										}
-									]
+									],
+									"sid": 395623629597439
 								}
 							]
 						},
@@ -155,6 +365,27 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
+									"objectClass": "ProjEnemyArrows",
+									"sid": 633093863531950,
+									"parameters": {
+										"object": "TiMWalls"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "ProjEnemyArrows",
+									"sid": 485246732767382
+								}
+							],
+							"sid": 895092828741998
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
 									"sid": 431622634775696,
 									"parameters": {
@@ -168,23 +399,46 @@
 									"objectClass": "Player",
 									"sid": 529427349827497,
 									"parameters": {
-										"instance-variable": "HasBow",
+										"instance-variable": "HasWeapon",
 										"value": "true"
-									}
-								},
-								{
-									"id": "add-to-instvar",
-									"objectClass": "Player",
-									"sid": 642548063275519,
-									"parameters": {
-										"instance-variable": "Ammo",
-										"value": "5"
 									}
 								},
 								{
 									"id": "destroy",
 									"objectClass": "PuBow",
 									"sid": 555106935734231
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TxtTooltip",
+									"sid": 226921056310963,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TxtTooltip",
+									"sid": 738962659975969,
+									"parameters": {
+										"text": "\"Use the Left Mouse Button to swing your axe.\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 791011420586468,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TxtTooltip",
+									"sid": 303460825719569,
+									"parameters": {
+										"visibility": "invisible"
+									}
 								}
 							],
 							"sid": 856892549012274
@@ -216,30 +470,108 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "Switch",
-											"sid": 184575118129841,
-											"parameters": {
-												"animation": "\"Open\"",
-												"from": "beginning"
-											}
-										}
-									],
+									"actions": [],
 									"sid": 382602219393629,
 									"children": [
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-instance-variable",
+													"id": "is-boolean-instance-variable-set",
 													"objectClass": "Switch",
-													"sid": 486279619837169,
+													"sid": 952237504439900,
 													"parameters": {
-														"instance-variable": "DoorNumber",
+														"instance-variable": "TurnOffTurrets"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Switch",
+													"sid": 339840732108161,
+													"parameters": {
+														"instance-variable": "TurnOffTurrets",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-range",
+													"objectClass": "RangedEnemy",
+													"sid": 993995705195751,
+													"behaviorType": "LineOfSight",
+													"parameters": {
+														"range": "0"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "RangedEnemy",
+													"sid": 694424873266561,
+													"behaviorType": "Turret",
+													"parameters": {
+														"state": "disabled"
+													}
+												}
+											],
+											"sid": 545254709297835,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MeleeEnemy",
+															"sid": 401878582751874,
+															"parameters": {
+																"instance-variable": "SpawnNum",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-visible",
+															"objectClass": "MeleeEnemy",
+															"sid": 896995186433688,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-collisions-enabled",
+															"objectClass": "MeleeEnemy",
+															"sid": 220266622733243,
+															"parameters": {
+																"collisions": "enabled"
+															}
+														},
+														{
+															"id": "set-enabled",
+															"objectClass": "MeleeEnemy",
+															"sid": 953487831593075,
+															"behaviorType": "MoveTo",
+															"parameters": {
+																"enabled": true
+															}
+														}
+													],
+													"sid": 334710158300052
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MoveableWall",
+													"sid": 436936229230431,
+													"parameters": {
+														"instance-variable": "DoorNumbers",
 														"comparison": 0,
-														"value": "MoveableWalls.DoorNumbers"
+														"value": "Switch.DoorNumber"
 													}
 												}
 											],
@@ -247,7 +579,7 @@
 												{
 													"id": "set-enabled",
 													"objectClass": "MoveableWall",
-													"sid": 258799549637405,
+													"sid": 158261617953899,
 													"behaviorType": "Solid",
 													"parameters": {
 														"state": "disabled"
@@ -256,9 +588,50 @@
 												{
 													"id": "set-visible",
 													"objectClass": "MoveableWall",
-													"sid": 499213426859998,
+													"sid": 899663176433278,
 													"parameters": {
 														"visibility": "toggle"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Switch",
+													"sid": 171258779565356,
+													"parameters": {
+														"animation": "\"Lit\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "TxtTooltip",
+													"sid": 804662526010382,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "TxtTooltip",
+													"sid": 853105412166907,
+													"parameters": {
+														"text": "\"You hear the sound of doors opening...\""
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 191985505524795,
+													"parameters": {
+														"seconds": "2"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "TxtTooltip",
+													"sid": 298284943915976,
+													"parameters": {
+														"visibility": "invisible"
 													}
 												}
 											],
@@ -274,29 +647,23 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Player",
-									"sid": 231376780657671,
+									"sid": 533621894547023,
 									"parameters": {
-										"object": "PuAmmo"
+										"object": "Exit"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "add-to-instvar",
-									"objectClass": "Player",
-									"sid": 435182345732238,
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 277513631807337,
 									"parameters": {
-										"instance-variable": "Ammo",
-										"value": "3"
+										"layout": "Exit"
 									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "PuAmmo",
-									"sid": 416068958582304
 								}
 							],
-							"sid": 281480255241258
+							"sid": 993484501310869
 						}
 					],
 					"sid": 192875353931914
@@ -328,9 +695,22 @@
 										"mouse-button": "right"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 230796908209315,
+									"parameters": {
+										"instance-variable": "HasWeapon"
+									}
 								}
 							],
 							"actions": [
+								{
+									"id": "stop-animation",
+									"objectClass": "Player",
+									"sid": 924064440695770
+								},
 								{
 									"id": "set-animation",
 									"objectClass": "Player",
@@ -341,19 +721,37 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 337569487013890,
+									"parameters": {
+										"instance-variable": "isAttacking",
+										"value": "true"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 894599633936106,
+									"sid": 949958663494905,
 									"parameters": {
-										"seconds": "0.1"
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 506602145401603,
+									"parameters": {
+										"instance-variable": "isAttacking",
+										"value": "false"
 									}
 								},
 								{
 									"id": "set-animation",
 									"objectClass": "Player",
-									"sid": 312481094757689,
+									"sid": 871874876978943,
 									"parameters": {
-										"animation": "\"Normal\"",
+										"animation": "\"Idle\"",
 										"from": "beginning"
 									}
 								}
@@ -364,29 +762,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-click",
-									"objectClass": "Mouse",
-									"sid": 400907179317926,
-									"parameters": {
-										"mouse-button": "right",
-										"click-type": "clicked"
-									}
-								},
-								{
-									"id": "mouse-button-is-down",
-									"objectClass": "Mouse",
-									"sid": 197480391822731,
-									"parameters": {
-										"mouse-button": "left"
-									},
-									"isInverted": true
-								},
-								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Player",
-									"sid": 971957842133739,
+									"sid": 842187432577068,
 									"parameters": {
-										"instance-variable": "HasBow"
+										"instance-variable": "isAttacking"
 									}
 								}
 							],
@@ -394,65 +774,37 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "Player",
-									"sid": 757110796978047,
+									"sid": 492600511926603,
 									"parameters": {
-										"object": "ProjPlayerArrows",
+										"object": "HurtBox",
 										"layer": "0",
 										"image-point": "1",
 										"create-hierarchy": false
 									}
-								},
-								{
-									"id": "set-speed",
-									"objectClass": "ProjPlayerArrows",
-									"sid": 566275007853136,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"speed": "ProjPlayerArrows.ProjectileSpeed"
-									}
 								}
 							],
-							"sid": 133182561997433
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Player",
-									"sid": 680257272970924,
-									"parameters": {
-										"animation": "\"Melee\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 625487677064776,
+							"sid": 900853095097562,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "on-collision-with-another-object",
+											"id": "is-mirrored",
 											"objectClass": "Player",
-											"sid": 370291946247434,
-											"parameters": {
-												"object": "Enemies"
-											}
+											"sid": 574058640311198
 										}
 									],
 									"actions": [
 										{
-											"id": "subtract-from-instvar",
-											"objectClass": "Enemies",
-											"sid": 954077813928116,
+											"id": "set-mirrored",
+											"objectClass": "HurtBox",
+											"sid": 952817256374025,
 											"parameters": {
-												"instance-variable": "Health",
-												"value": "Player.MeleeAttackPower"
+												"state": "mirrored"
 											}
 										}
 									],
-									"sid": 373667435014027
+									"sid": 224135982086754
 								}
 							]
 						},
@@ -460,9 +812,76 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 415319143237003,
+									"parameters": {
+										"instance-variable": "isAttacking"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "HurtBox",
+									"sid": 240749585305172
+								}
+							],
+							"sid": 902414583638227
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Player",
+									"sid": 937062195361056,
+									"parameters": {
+										"animation": "\"Melee\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 357396311367310,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "Player",
+											"sid": 393822404037332,
+											"parameters": {
+												"comparison": 0,
+												"number": "3"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 194467890103061
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 253006166098167
+								}
+							],
+							"actions": [],
+							"sid": 498122575280809
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "ProjPlayerArrows",
-									"sid": 651354326406329,
+									"objectClass": "HurtBox",
+									"sid": 526127387573806,
 									"parameters": {
 										"object": "Enemies"
 									}
@@ -472,35 +891,14 @@
 								{
 									"id": "subtract-from-instvar",
 									"objectClass": "Enemies",
-									"sid": 425757727791347,
+									"sid": 759223224563595,
 									"parameters": {
 										"instance-variable": "Health",
-										"value": "Player.RangedAttackPower"
+										"value": "Player.MeleeAttackPower"
 									}
 								}
 							],
-							"sid": 814160406886555
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "ProjPlayerArrows",
-									"sid": 662515982596654,
-									"parameters": {
-										"object": "Walls"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "ProjEnemyArrows",
-									"sid": 672470547399262
-								}
-							],
-							"sid": 677840983529400
+							"sid": 271991598287417
 						}
 					],
 					"sid": 196173743346148
@@ -558,6 +956,14 @@
 									"parameters": {
 										"control": "left"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 619574563351264,
+									"parameters": {
+										"state": "mirrored"
+									}
 								}
 							],
 							"sid": 625493714682704
@@ -608,9 +1014,168 @@
 									"parameters": {
 										"control": "right"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Player",
+									"sid": 575177348159350,
+									"parameters": {
+										"state": "not-mirrored"
+									}
 								}
 							],
 							"sid": 532648976418812
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Player",
+									"sid": 698557610007746,
+									"behaviorType": "8Direction"
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 239719738894913,
+									"parameters": {
+										"instance-variable": "isAttacking"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 647779456759502,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 734973243531368,
+											"parameters": {
+												"instance-variable": "HasWeapon"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 508837892588834,
+											"parameters": {
+												"animation": "\"Run\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 100450411816738
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 119132745675033,
+											"parameters": {
+												"instance-variable": "HasWeapon"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 697268053517459,
+											"parameters": {
+												"animation": "\"RunNoWep\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 820069994668080
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Player",
+									"sid": 877593473327557,
+									"behaviorType": "8Direction",
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 735701495517833,
+									"parameters": {
+										"instance-variable": "isAttacking"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 419602104576872,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 481059079982434,
+											"parameters": {
+												"instance-variable": "HasWeapon"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 417956393575132,
+											"parameters": {
+												"animation": "\"Idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 264904566087730
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player",
+											"sid": 648410482489056,
+											"parameters": {
+												"instance-variable": "HasWeapon"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player",
+											"sid": 785895289127206,
+											"parameters": {
+												"animation": "\"IdleNoWep\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 362907080839895
+								}
+							]
 						}
 					],
 					"sid": 878660020022571
@@ -649,15 +1214,10 @@
 							],
 							"actions": [
 								{
-									"id": "move-to-position",
+									"id": "stop",
 									"objectClass": "MeleeEnemy",
-									"sid": 432998850807829,
-									"behaviorType": "MoveTo",
-									"parameters": {
-										"x": "MeleeEnemy.StartingPosX",
-										"y": "MeleeEnemy.StartingPosY",
-										"mode": "direct"
-									}
+									"sid": 586859436128927,
+									"behaviorType": "MoveTo"
 								}
 							],
 							"sid": 402131777083533
@@ -674,6 +1234,15 @@
 										"object": "Player",
 										"image-point": "0"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "MeleeEnemy",
+									"sid": 114968632231947,
+									"parameters": {
+										"object": "Player"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -690,6 +1259,144 @@
 								}
 							],
 							"sid": 389852045157623
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "MeleeEnemy",
+									"sid": 562424117664141,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MeleeEnemy",
+									"sid": 331567805753787,
+									"parameters": {
+										"animation": "\"Attack\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "MeleeEnemy",
+									"sid": 214306275772286,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"sid": 199252484408551
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "MeleeEnemy",
+									"sid": 361367507526509,
+									"behaviorType": "MoveTo"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "MeleeEnemy",
+									"sid": 287690171379512,
+									"parameters": {
+										"object": "Player"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MeleeEnemy",
+									"sid": 161259310962602,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 947718156981577
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "MeleeEnemy",
+									"sid": 533224124211080,
+									"behaviorType": "MoveTo",
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "MeleeEnemy",
+									"sid": 157572636584614,
+									"parameters": {
+										"object": "Player"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MeleeEnemy",
+									"sid": 205930013070566,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 650060510421068
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "MeleeEnemy",
+									"sid": 677501487869777,
+									"parameters": {
+										"animation": "\"Attack\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 731825691552742,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 603172948068098,
+											"parameters": {
+												"interval-seconds": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 934469631727534,
+											"parameters": {
+												"instance-variable": "Health",
+												"value": "MeleeEnemy.AttackPower"
+											}
+										}
+									],
+									"sid": 157380121596148
+								}
+							]
 						}
 					],
 					"sid": 598545483514460
@@ -705,6 +1412,67 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "has-los-to-object",
+									"objectClass": "RangedEnemy",
+									"sid": 336946129881526,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "acquire-target",
+									"objectClass": "RangedEnemy",
+									"sid": 599893981576899,
+									"behaviorType": "Turret",
+									"parameters": {
+										"target": "Player"
+									}
+								}
+							],
+							"sid": 167243616117189
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "RangedEnemy",
+									"sid": 531931654273194,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "unacquire-target",
+									"objectClass": "RangedEnemy",
+									"sid": 645941691617525,
+									"behaviorType": "Turret"
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "RangedEnemy",
+									"sid": 943779641461507,
+									"parameters": {
+										"animation": "\"Idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 805496366159830
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-shoot",
 									"objectClass": "RangedEnemy",
 									"sid": 545073456553194,
@@ -713,27 +1481,61 @@
 							],
 							"actions": [
 								{
+									"id": "set-animation",
+									"objectClass": "RangedEnemy",
+									"sid": 112022779447862,
+									"parameters": {
+										"animation": "\"Fire\"",
+										"from": "beginning"
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "RangedEnemy",
-									"sid": 368824475527578,
+									"sid": 324701539906347,
 									"parameters": {
 										"object": "ProjEnemyArrows",
 										"layer": "0",
-										"image-point": "0",
+										"image-point": "1",
 										"create-hierarchy": false
 									}
 								},
 								{
 									"id": "set-speed",
 									"objectClass": "ProjEnemyArrows",
-									"sid": 827616751419062,
+									"sid": 854773087603900,
 									"behaviorType": "Bullet",
 									"parameters": {
-										"speed": "Projectiles.ProjectileSpeed"
+										"speed": "400\n"
 									}
 								}
 							],
 							"sid": 543153719596535
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "ProjEnemyArrows",
+									"sid": 851040654154095,
+									"parameters": {
+										"object": "Player"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 304810276705884,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 556451151512212
 						}
 					],
 					"sid": 325755790949201
@@ -746,7 +1548,7 @@
 							"objectClass": "ProjEnemyArrows",
 							"sid": 302499155883922,
 							"parameters": {
-								"object": "Walls"
+								"object": "TiMWalls"
 							}
 						}
 					],
@@ -778,6 +1580,15 @@
 							"id": "destroy",
 							"objectClass": "Enemies",
 							"sid": 138237156877586
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 591905873548474,
+							"parameters": {
+								"instance-variable": "Experience",
+								"value": "5"
+							}
 						}
 					],
 					"sid": 856962707142418
@@ -791,17 +1602,7 @@
 							"sid": 849024393316672
 						}
 					],
-					"actions": [
-						{
-							"id": "acquire-target",
-							"objectClass": "RangedEnemy",
-							"sid": 247931952156713,
-							"behaviorType": "Turret",
-							"parameters": {
-								"target": "Player"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 181898316237415
 				},
 				{
@@ -912,36 +1713,6 @@
 							"sid": 895203323947621
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Key",
-							"sid": 610808297617263,
-							"parameters": {
-								"object": "Player"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "Key",
-							"sid": 190567984142235
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Chest",
-							"sid": 518797750648850,
-							"parameters": {
-								"instance-variable": "IsUnlocked",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 464334695552352
 				}
 			],
 			"sid": 323344076744954
@@ -963,35 +1734,34 @@
 					"parameters": {
 						"text": "\"Health: \" & Player.Health"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TxtLevel",
+					"sid": 191006376825840,
+					"parameters": {
+						"text": "\"Level: \"& Player.Level"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "RangedEnemy",
+					"sid": 416101324156497,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TiMWalls"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "HurtBox",
+					"sid": 716137718679026,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
-			"sid": 503538702123367,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player",
-							"sid": 560622242616446,
-							"parameters": {
-								"instance-variable": "HasBow"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "TxtAmmo",
-							"sid": 795145477237571,
-							"parameters": {
-								"text": "\"Arrows: \" & Player.Ammo "
-							}
-						}
-					],
-					"sid": 587986937054498
-				}
-			]
+			"sid": 503538702123367
 		}
 	],
 	"sid": 843601103535796

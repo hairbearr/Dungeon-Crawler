@@ -157,14 +157,6 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Fade",
-			"name": "Fade",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
 		}
 	],
 	"uniqueId": "eu70cj1u4xc",
@@ -178,7 +170,16 @@
 			"Keyboard",
 			"Mouse",
 			"Browser",
-			"Touch"
+			"Touch",
+			"TiMForeground",
+			"Sprite",
+			"HurtBox",
+			"TxtBrazier",
+			"Exit",
+			"TxtTitle",
+			"Button",
+			"Prototype01_Button2",
+			"Prototype01_Button3"
 		],
 		"subfolders": [
 			{
@@ -190,14 +191,15 @@
 					"MoveableWall",
 					"Player",
 					"ProjEnemyArrows",
-					"ProjPlayerArrows",
-					"PuAmmo",
 					"PuBow",
 					"RangedEnemy",
 					"Switch",
-					"TxtAmmo",
+					"TxtTooltip",
 					"TxtHealth",
-					"Walls"
+					"TiMWalls",
+					"TiMFloors",
+					"TxtLevel",
+					"TiMWalls2"
 				],
 				"subfolders": [],
 				"name": "Prototype01"
@@ -241,7 +243,8 @@
 					"Chests",
 					"Enemies",
 					"MoveableWalls",
-					"Projectiles"
+					"Projectiles",
+					"ItemDrops"
 				],
 				"subfolders": [],
 				"name": "Prototype1"
@@ -260,7 +263,8 @@
 			"MenuPrototype",
 			"Prototype01",
 			"Prototype02",
-			"Prototype03"
+			"Prototype03",
+			"Exit"
 		],
 		"subfolders": []
 	},

@@ -99,6 +99,24 @@
 						}
 					],
 					"sid": 571428684958422
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Prototype01_Button2",
+							"sid": 587355739966126
+						}
+					],
+					"actions": [
+						{
+							"id": "reload",
+							"objectClass": "Browser",
+							"sid": 563723781564519
+						}
+					],
+					"sid": 494312908466765
 				}
 			],
 			"sid": 950229227660712

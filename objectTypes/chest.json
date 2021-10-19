@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 631412193707246,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "ItemInsideID",
+			"type": "number",
+			"desc": "",
+			"sid": 237123018564015
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -47,7 +54,7 @@
 					}
 				],
 				"sid": 367376569173251,
-				"name": "Skeleton",
+				"name": "Open",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

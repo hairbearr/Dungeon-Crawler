@@ -1,0 +1,21 @@
+{
+	"name": "TiMForeground",
+	"plugin-id": "Tilemap",
+	"sid": 241909383174964,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 98,
+		"height": 274,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9100560,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}
