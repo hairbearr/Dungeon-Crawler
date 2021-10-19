@@ -117,6 +117,30 @@
 						}
 					],
 					"sid": 494312908466765
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 993399874375814
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 591937923119877,
+							"parameters": {
+								"audio-file": "5_Dungeon_2_Master",
+								"loop": "looping",
+								"volume": "-10",
+								"tag-optional": "\"Dungeon Master Song\""
+							}
+						}
+					],
+					"sid": 402653841473727
 				}
 			],
 			"sid": 950229227660712

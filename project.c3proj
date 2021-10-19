@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 26000,
+	"savedWithRelease": 26800,
 	"name": "3 Prototypes using Mechanics",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "Tilemap",
 			"name": "Tilemap",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Button",
 			"name": "Button",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "Browser",
 			"name": "Browser",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,15 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -75,7 +83,7 @@
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -83,7 +91,7 @@
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -91,7 +99,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -99,7 +107,7 @@
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -107,7 +115,7 @@
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -115,7 +123,7 @@
 			"id": "Turret",
 			"name": "Turret",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -123,7 +131,7 @@
 			"id": "Car",
 			"name": "Car",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -131,7 +139,7 @@
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -139,7 +147,7 @@
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -147,7 +155,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		},
 		{
@@ -155,7 +163,7 @@
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
-			"version": "r260",
+			"version": "r268",
 			"bundled": false
 		}
 	],
@@ -179,7 +187,8 @@
 			"TxtTitle",
 			"Button",
 			"Prototype01_Button2",
-			"Prototype01_Button3"
+			"Prototype01_Button3",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -283,7 +292,93 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Stinger_Defeat_2_Master.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 818786257441490
+				},
+				{
+					"name": "Stinger_Victory_2_Master.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 757627029475458
+				},
+				{
+					"name": "5_Dungeon_2_Master.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 964802332783024
+				},
+				{
+					"name": "doorOpen_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 586350367316779
+				},
+				{
+					"name": "handleCoins2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 762168630984625
+				},
+				{
+					"name": "metalLatch.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 853762450606491
+				},
+				{
+					"name": "footstep00.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 967035179156728
+				},
+				{
+					"name": "knifeSlice2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 701914226732803
+				},
+				{
+					"name": "footstep01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 260343959129234
+				},
+				{
+					"name": "footstep09.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 521636350526323
+				},
+				{
+					"name": "footstep08.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 510166718080347
+				},
+				{
+					"name": "footstep07.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 303115177960022
+				},
+				{
+					"name": "footstep06.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 581369037605653
+				},
+				{
+					"name": "footstep05.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 521155558973145
+				},
+				{
+					"name": "footstep04.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 830212293824717
+				},
+				{
+					"name": "footstep03.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 662371381890308
+				},
+				{
+					"name": "footstep02.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 415383727017721
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
@@ -416,7 +511,8 @@
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": true,
-		"cordovaiOSScheme": "app"
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "file"
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,

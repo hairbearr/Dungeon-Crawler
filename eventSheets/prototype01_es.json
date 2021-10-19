@@ -233,6 +233,17 @@
 										"instance-variable": "MeleeAttackPower",
 										"value": "1"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 611326391473650,
+									"parameters": {
+										"audio-file": "Stinger_Victory_2_Master",
+										"loop": "not-looping",
+										"volume": "-15",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 615933385256578
@@ -290,6 +301,17 @@
 											"sid": 721527972919896,
 											"parameters": {
 												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 180358820933995,
+											"parameters": {
+												"audio-file": "metalLatch",
+												"loop": "not-looping",
+												"volume": "0",
+												"tag-optional": "\"\""
 											}
 										},
 										{
@@ -407,6 +429,17 @@
 									"id": "destroy",
 									"objectClass": "PuBow",
 									"sid": 555106935734231
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 639565782599610,
+									"parameters": {
+										"audio-file": "Stinger_Victory_2_Master",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
 								},
 								{
 									"id": "set-visible",
@@ -603,6 +636,17 @@
 													}
 												},
 												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 324549076643737,
+													"parameters": {
+														"audio-file": "doorOpen_1",
+														"loop": "not-looping",
+														"volume": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
 													"id": "set-visible",
 													"objectClass": "TxtTooltip",
 													"sid": 804662526010382,
@@ -718,6 +762,17 @@
 									"parameters": {
 										"animation": "\"Melee\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 890343296276129,
+									"parameters": {
+										"audio-file": "knifeSlice2",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
 									}
 								},
 								{
