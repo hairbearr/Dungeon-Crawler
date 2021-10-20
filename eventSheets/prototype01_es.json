@@ -12,6 +12,16 @@
 			"sid": 331056608074654
 		},
 		{
+			"eventType": "variable",
+			"name": "Volume",
+			"type": "number",
+			"initialValue": "-15",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 643200246158511
+		},
+		{
 			"eventType": "comment",
 			"text": "Do not delete"
 		},
@@ -237,11 +247,11 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 611326391473650,
+									"sid": 621525168177427,
 									"parameters": {
 										"audio-file": "Stinger_Victory_2_Master",
 										"loop": "not-looping",
-										"volume": "-15",
+										"volume": "Volume",
 										"tag-optional": "\"\""
 									}
 								}
@@ -306,11 +316,11 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 180358820933995,
+											"sid": 502329478234686,
 											"parameters": {
 												"audio-file": "metalLatch",
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Volume",
 												"tag-optional": "\"\""
 											}
 										},
@@ -433,11 +443,11 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 639565782599610,
+									"sid": 611358535259003,
 									"parameters": {
 										"audio-file": "Stinger_Victory_2_Master",
 										"loop": "not-looping",
-										"volume": "0",
+										"volume": "Volume",
 										"tag-optional": "\"\""
 									}
 								},
@@ -638,11 +648,11 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 324549076643737,
+													"sid": 320303440490673,
 													"parameters": {
 														"audio-file": "doorOpen_1",
 														"loop": "not-looping",
-														"volume": "0",
+														"volume": "Volume",
 														"tag-optional": "\"\""
 													}
 												},
@@ -767,11 +777,11 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 890343296276129,
+									"sid": 199729439205001,
 									"parameters": {
 										"audio-file": "knifeSlice2",
 										"loop": "not-looping",
-										"volume": "0",
+										"volume": "Volume",
 										"tag-optional": "\"\""
 									}
 								},
@@ -787,9 +797,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 949958663494905,
+									"sid": 501540601974608,
 									"parameters": {
-										"seconds": "0.5"
+										"seconds": "0.3"
 									}
 								},
 								{
@@ -889,39 +899,6 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-animation-playing",
-									"objectClass": "Player",
-									"sid": 937062195361056,
-									"parameters": {
-										"animation": "\"Melee\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 357396311367310,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-animation-frame",
-											"objectClass": "Player",
-											"sid": 393822404037332,
-											"parameters": {
-												"comparison": 0,
-												"number": "3"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 194467890103061
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "else",
 									"objectClass": "System",
 									"sid": 253006166098167
@@ -954,6 +931,29 @@
 								}
 							],
 							"sid": 271991598287417
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player",
+									"sid": 704294382421527,
+									"parameters": {
+										"instance-variable": "Health",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 841194614225234
+								}
+							],
+							"sid": 482803294308748
 						}
 					],
 					"sid": 196173743346148

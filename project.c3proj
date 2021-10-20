@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 26800,
-	"name": "3 Prototypes using Mechanics",
+	"name": "Untitled Dungeon Crawlere",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -179,11 +179,7 @@
 			"Mouse",
 			"Browser",
 			"Touch",
-			"TiMForeground",
-			"Sprite",
-			"HurtBox",
 			"TxtBrazier",
-			"Exit",
 			"TxtTitle",
 			"Button",
 			"Prototype01_Button2",
@@ -208,7 +204,10 @@
 					"TiMWalls",
 					"TiMFloors",
 					"TxtLevel",
-					"TiMWalls2"
+					"TiMWalls2",
+					"Exit",
+					"HurtBox",
+					"TiMForeground"
 				],
 				"subfolders": [],
 				"name": "Prototype01"
@@ -270,21 +269,35 @@
 	"layouts": {
 		"items": [
 			"MenuPrototype",
-			"Prototype01",
-			"Prototype02",
-			"Prototype03",
+			"Level One",
 			"Exit"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Prototype02",
+					"Prototype03"
+				],
+				"subfolders": [],
+				"name": "Not Part of the Game"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
 			"MenuPrototype_ES",
-			"Prototype01_ES",
-			"Prototype02_ES",
-			"Prototype03_ES"
+			"Prototype01_ES"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Prototype02_ES",
+					"Prototype03_ES"
+				],
+				"subfolders": [],
+				"name": "Not Part of the Game"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {
@@ -469,10 +482,10 @@
 		]
 	},
 	"properties": {
-		"description": "use this template for Project 3",
-		"version": "1.0.0.0",
-		"author": "GJ Lee",
-		"authorEmail": "gj_lee@bloomfield.edu",
+		"description": "",
+		"version": "0.0.1",
+		"author": "Harry Brock",
+		"authorEmail": "brock.harry2113@gmail.com",
 		"authorWebsite": "",
 		"appId": "",
 		"pixelRounding": false,
@@ -504,7 +517,7 @@
 		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
-		"sampling": "trilinear",
+		"sampling": "nearest",
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",

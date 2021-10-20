@@ -93,7 +93,7 @@
 				{
 					"type": "TxtTitle",
 					"properties": {
-						"text": "Another Dungeon Crawler",
+						"text": "The Untitled Dungeon Crawler",
 						"enable-bbcode": true,
 						"font": "Baskerville",
 						"size": 40,
@@ -116,9 +116,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 139.20564786370113,
+						"x": 86.20564786370113,
 						"y": 46.29862291224974,
-						"width": 575.5134128738532,
+						"width": 681.5134128738532,
 						"height": 53.456404769174796,
 						"originX": 0,
 						"originY": 0,
@@ -196,6 +196,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -210,5 +211,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
+	"projection": "perspective",
 	"eventSheet": "MenuPrototype_ES"
 }
